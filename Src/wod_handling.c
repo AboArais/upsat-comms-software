@@ -227,15 +227,18 @@ comms_ex_wod_init()
 /**
  * Sends the last stored valid WOD. If now WOD has been
  * received, the transmitted WOD has all its fields zeroed.
+ *
+ * @param bypass_check if set to true, the check of command and control
+ * period is bypassed.
  * @return number of bytes sent or negative error code
  */
 int32_t
-comms_wod_tx()
+comms_wod_tx(uint8_t bypass_check)
 {
   int32_t ret = 0;
 
   /* Check if the satellite is during command and control phase */
-  if(is_cmd_ctrl_enabled()) {
+  if(is_cmd_ctrl_enabled() && !bypass_check) {
     return 0;
   }
 

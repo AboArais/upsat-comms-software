@@ -404,7 +404,7 @@ comms_routine_dispatcher(comms_tx_job_list_t *tx_jobs)
   }
   else if(tx_jobs->tx_wod){
     tx_jobs->tx_wod = 0;
-    ret = comms_wod_tx();
+    ret = comms_wod_tx(0);
   }
   else if(tx_jobs->tx_ext_wod){
     tx_jobs->tx_ext_wod = 0;

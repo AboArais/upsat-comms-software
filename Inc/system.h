@@ -23,6 +23,7 @@
 #define SYSTEM_APP_ID _COMMS_APP_ID_
 #define POOL_PKT_EXT
 
+#define SYSTEM_ENDIANNESS SYS_LITTLE_ENDIAN
 #include "services.h"
 
 

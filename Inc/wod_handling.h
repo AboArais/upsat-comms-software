@@ -73,7 +73,7 @@ comms_ex_wod_init();
 uint8_t
 bat_voltage_valid(uint8_t val);
 int32_t
-comms_wod_tx();
+comms_wod_tx(uint8_t bypass_check);
 int32_t
 comms_ex_wod_tx();
 uint8_t
